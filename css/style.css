@@ -1,6 +1,6 @@
 ﻿/* MERGESORT APP */
 /* resets */
-body { margin: 0px; padding: 0px; background: #b6b7bc; font-family: "Courier New"; font-size: 62.5%; color: #696969; }
+body { margin: 0px; padding: 0px; background: #b6b7bc; font-family: "Trebuchet MS", "Courier New"; font-size: 62.5%; color: #696969; }
 
 a:link, a:visited { color: #034af3; }
 a:hover { color: #1d60ff; text-decoration: none; }
@@ -18,7 +18,7 @@ h4 { font-size: 1.2em; }
 h5, h6 { font-size: 1em; }
 
 /* principal layout */
-.main { width: 96em; height: 96em; margin: 2em auto 0 auto; box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.82); background-color: #fff; border: 1px solid #496077;  position: relative; }
+.main { width: 96em; height: 55em; margin: 2em auto 0 auto; box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.82); background-color: #fff; border: 1px solid #496077;  position: relative; }
 
 header { margin: 0; padding: 0; background: #02ADAD; }
 header hgroup { text-align: center; }
@@ -58,7 +58,7 @@ header h1 { margin: 0; padding: 0 0 0 1em; color: #FFFFFF; border: none; line-he
 #result ul li { margin: 0 1.3em 0 0!important; padding: 5px; }
 #result ul li:last-child { margin: 0 0 0 0!important; }
 
-#areaScript #botaoSortear { width: 5em; height: 2.5em; background: #FFEEAA; }
+#areaScript #botaoSortear { width: 5em; height: 1.5em; font-size: 1.4em; background: #FFEEAA; }
 
 footer { margin: 0 auto; padding: 1em 0 0 0; color: #4e5766; text-align: center; line-height: normal; }
 

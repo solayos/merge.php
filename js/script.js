@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $('#areaScript ul li').hide();
-    $('#areaScript #botaoSortear').click(function () {
+    $('#botaoSortear').click(function () {
         var i = 0;
         var quantidade = parseInt(prompt("Quantos numeros vamos ordenar? \t\n (com ate 3 digitos)"));
         var areaScript = 'areaScript';
@@ -9,18 +9,21 @@ $(document).ready(function () {
         //criaElementos (pai, tipo, quantidade)
         var tipo = base;
         $('#' + areaScript).criaFilho(areaScript, tipo, 1);
-        
+
+        while (i < quantidade) {
+            $('#' + areaScript + ' .' + tipo).criaLista(tipo, 1);
+
+            i++;
+        }
+
         if (quantidade > 8) {
             $('#' + areaScript + ' .base').css('height', '9em');
         }
 
-        i = 0;
+        alert($('#' + areaScript + ' .' + tipo + ' ul li'));
+
         while (i < quantidade) {
-            var listaLocal = base;
-            $('#' + areaScript + ' .' + tipo).criaLista(listaLocal, quantidade);
-
-
-            $('#' + areaScript + ' .' + listaLocal + ' ul li').eq(i).show().animate(
+            $('#' + areaScript + ' .' + tipo + ' ul li').eq(i).show().animate(
                 {
                     opacity: 1,
                     color: "#000000",
@@ -44,13 +47,11 @@ $.fn.criaFilho = function (pai, tipo, quantidade) {
 $.fn.criaLista = function (pai, limite) {
     meuPai = $('#' + pai);
     var i = 0;
-    var lista = meuPai.append('<ul>');
-    alert(limite);
+    var listaLocal = getNumbers();
+
     while (i < limite) {
-        var item = lista.append('<li>');
-        var itemList = getNumbers();
-        var valor = item.text(itemList);
-        item.eq(i).append(valor);
+        meuPai.append('<ul>');
+        meuPai.find('ul').eq(i).append('<li>' + listaLocal + '</li>');
         i++;
     }
 };
