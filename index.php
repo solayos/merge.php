@@ -8,7 +8,7 @@
 	
 	<link href="/css/style.css" rel="stylesheet" type="text/css" />
     
-	<script src="/js/jquery-2.0.3.min.js" type="text/javascript"></script>
+	<script src="/js/jquery.min.js" type="text/javascript"></script>
     <!--<script src="/js/jquery-1.10.2.min.js" type="text/javascript"></script>-->
 	
     <script src="/js/script.js" type="text/javascript"></script>
